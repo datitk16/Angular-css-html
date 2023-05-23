@@ -1,20 +1,13 @@
 <aside class="main-sidebar">
-    <a routerLink="/">
-        <div class="brand-link d-flex">
-            <div class="title">Home</div>
-        </div>
-    </a>
     <div class="sidebar">
         <nav class="mt-2 ">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li *ngFor="let menuItem of menuItems" class="nav-item has-treeview">
-                    <div class="item-category" style="align-items: center">
-                        <div class="item-category content-item">
-                            {{menuItem}}
-                        </div>
+            <div *ngFor="let menuItem of menuItems">
+                <a>
+                    <div class="border-display content-item">
+                        {{menuItem}}
                     </div>
-                </li>
-            </ul>
+                </a>
+            </div>
         </nav>
     </div>
 </aside>
