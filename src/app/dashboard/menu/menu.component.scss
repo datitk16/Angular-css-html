@@ -1,22 +1,32 @@
+@import '../../../styles/variables.scss';
+
 .main-sidebar {
     position: fixed;
     top: 0;
     left: 0;
     width: 200px;
     height: 100%;
-    background-color: black;
-    color: white;
+    background-color: $black;
+    text-decoration: none;
 
-    .border-display {
-        padding: 10px 0 10px 10px;
-        border-bottom: 1px solid #e08e0b;
+    .sidebar {
+        .border-display {
+            padding: 10px 0 10px 10px;
+            border-bottom: 1px solid $border;
+        }
+
+        a {
+            text-decoration: none;
+            color: $white-gray;
+
+            &.active {
+                color: $primary
+            }
+        }
+
     }
 
-    ul {
-        list-style-type: none;
-        padding-left: 0;
 
-    }
 }
 
 

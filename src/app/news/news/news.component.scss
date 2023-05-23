@@ -1,0 +1,32 @@
+ @import '../../../styles/mixin.scss';
+
+ .container {
+     margin: auto;
+
+     .header {
+         margin-top: 20px;
+         @include center-element;
+     }
+
+     .block-content {
+         margin-top: 40px;
+         @include center-element;
+     }
+
+     .banner {
+         margin-top: 30px;
+         padding: 38px 0 38px 0;
+         background-color: #EFEFEF;
+
+         .title {
+             font-weight: bold;
+             color: black;
+         }
+
+         .banner-content {
+             text-align: center;
+             max-width: 60%;
+             margin: auto;
+         }
+     }
+ }

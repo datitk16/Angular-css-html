@@ -1,10 +1,12 @@
 <aside class="main-sidebar">
     <div class="sidebar">
-        <nav class="mt-2 ">
+        <nav>
             <div *ngFor="let menuItem of menuItems">
-                <a>
+                <a [class.active]="menuItem.route == 'home'"
+                    [routerLink]="menuItem.route  ?  '/' +  menuItem.route : null"
+                    [routerLinkActive]="(menuItem.route && menuItem.route != 'home')  ? 'active' : ''">
                     <div class="border-display content-item">
-                        {{menuItem}}
+                        {{menuItem.title}}
                     </div>
                 </a>
             </div>

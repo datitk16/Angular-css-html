@@ -6,15 +6,32 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'news', pathMatch: 'full' },
   {
     path: '',
     component: DashboardComponent,
     children: [
       {
-        path: 'dashboard',
-        loadChildren: () => import('../home-page/home-page.module').then(m => m.HomePageModule),
+        path: 'home',
+        loadChildren: () => import('../home/home.module').then(m => m.HomeModule),
       },
+      {
+        path: 'services',
+        loadChildren: () => import('../services/services.module').then(m => m.ServicesModule),
+      },
+      {
+        path: 'news',
+        loadChildren: () => import('../news/news.module').then(m => m.NewsModule),
+      },
+      {
+        path: 'blog',
+        loadChildren: () => import('../blog/blog.module').then(m => m.BlogModule),
+      },
+      {
+        path: 'contact',
+        loadChildren: () => import('../contact/contact.module').then(m => m.ContactModule),
+      },
+
     ]
   },
 ];
